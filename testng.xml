@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="REST Assured test examples">
+    <test name="All">
+        <classes>
+            <class name="tests.DataDrivenPost"/>
+            <class name="tests.GetTest"/>
+            <class name="tests.PostTest"/>
+        </classes>
+    </test>
+</suite>
