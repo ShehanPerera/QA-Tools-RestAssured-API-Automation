@@ -1,10 +1,10 @@
-##QA-Tool API Test Automation
+## QA-Tool API Test Automation
 
 * This is a API test automation tool based on Rest assured 
 * This contain how to send get , post request and post data driven test 
 * Sample mock server can use for testing 
 
-##Pre-requires 
+### Pre-requires 
 
 java : 1.8
 
@@ -58,3 +58,22 @@ curl --location --request POST 'http://127.0.0.1:3000/users' \
 2 . Generate Report
 
 `` ./allure serve --port 3001 {location to prject}/allure-results``
+
+3. Results 
+
+![Initial view](https://user-images.githubusercontent.com/29086284/186380755-eec1c057-574f-46c5-bae6-22fdac015730.png)
+
+![Detailed view](https://user-images.githubusercontent.com/29086284/186380867-86cfcef0-c927-4aaa-9a43-0267a4cfa6dc.png)
+
+
+## Tutorials 
+
+https://www.youtube.com/playlist?list=PLhW3qG5bs-L8xPrBwDv66cTMlFNeUPdJx
+
+https://testautomationu.applitools.com/automating-your-api-tests-with-rest-assured/
+
+## Certification
+
+![Certficate](https://user-images.githubusercontent.com/29086284/186381189-4ce39bb4-c857-41f6-b6fa-3e6624c35819.png)
+
+
