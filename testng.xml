@@ -5,6 +5,7 @@
             <class name="tests.DataDrivenPost"/>
             <class name="tests.GetTest"/>
             <class name="tests.PostTest"/>
+            <class name="tests.DataDrivenGet"/>
         </classes>
     </test>
 </suite>

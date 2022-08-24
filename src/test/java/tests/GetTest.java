@@ -1,8 +1,12 @@
 package tests;
 
 import io.restassured.RestAssured;
+import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.builder.ResponseSpecBuilder;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.*;
@@ -16,7 +20,6 @@ public class GetTest {
         Response response = RestAssured.get("http://127.0.0.1:3000/users");
         int statusCode = response.statusCode();
         double timeSpent = response.getTime();
-        System.out.println(response.getBody().asString());
 
         Assert.assertEquals(statusCode, 200, "Verify Status Code");
         double timeExpect = 600.00;
@@ -26,24 +29,13 @@ public class GetTest {
     }
 
     @Test
-    public void getAllUsersTest2() {
-
-        given().
-                get("http://127.0.0.1:3000/users").
-                then().
-                statusCode(200).
-                body("[1].id", equalTo(2)).log().all();
-
-    }
-
-    @Test
     public void getUserFromID3() {
 
         given().
                 get("http://127.0.0.1:3000/users/3").
                 then().
+                assertThat().
                 statusCode(200).
                 body("usertype", equalTo("notadmin")).log().all();
-
     }
 }

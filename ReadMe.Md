@@ -7,10 +7,15 @@
 ##Pre-requires 
 
 java : 1.8
+
 allure 
+
 maven  -v : 3.6.1 
+
 node -v : v10.23.0
+
 npm -v : 6.14.8
+
 
 ### Run mock server
 
@@ -21,14 +26,16 @@ npm -v : 6.14.8
 
 ### Mock server sample requests
 
-1. To get users 
+1 . To get users 
 
 ``
 curl --location --request GET 'http://127.0.0.1:3000/users' \
   --header 'Date: message/rfc822' \
   --data-raw '' 
 ``
-2. To create user 
+
+2 . To create user 
+
 
 ``
 curl --location --request POST 'http://127.0.0.1:3000/users' \
@@ -41,12 +48,13 @@ curl --location --request POST 'http://127.0.0.1:3000/users' \
           "usertype": "restuser"
   }'
   ``
-##Run Test 
+  
+## Run Test 
 
-1. Execute as maven test 
+1 . Execute as maven test 
 
 ``mvn test ``
 
-2. Generate Report
+2 . Generate Report
 
 `` ./allure serve --port 3001 {location to prject}/allure-results``
